@@ -1,5 +1,7 @@
 import express, { Request, Response } from "express";
 
+import "@controllers/UsersController";
+
 const app = express();
 
 app.use(express.json());

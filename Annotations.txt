@@ -14,3 +14,20 @@ yarn add ts-node-dev -D
 --respawn 
 --transpile-only
 --ignore-watch node_modules
+-r : serve para executar um script antes dos outros.
+
+-> Dentro do tsconfig.json:
+"outDir": "./dist",
+"rootDir": "./src",    
+Faz com que, ao rodar o comando yarn tsc para transformar o codigo typescript em javascript, os arquivos sejam
+adicionados ao diretorio especificado dentro da propriedade outDir. Por padrão os arquivos vão para dentro do ./src
+
+Mudar o target para ES2017
+
+-> typeRoots é usado para sobrescrever alguma tipagem que já vem por padrão
+
+-> resolveJsonModule: Permite fazer importações dentro de um arquivo.
+
+-> Instalar o módulo tsconfig-paths como dependência de desenvolvimento para evitar
+o erro "Cannot find module '@controllers/UsersController'"
+yarn add tsconfig-paths -D
