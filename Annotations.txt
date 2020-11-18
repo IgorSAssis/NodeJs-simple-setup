@@ -1,0 +1,16 @@
+--> instalar os @types para o typescript sempre como dependencia de desenvolvimento
+
+================= Typescript
+-> instalar o typescript como dependência de desenvolvimento.
+yarn add typescript -D
+
+-> Criar o arquivo de configuração do typescript
+yarn tsc --init
+
+-> Junção do tsc (converte código Typescript em javascript), node e nodemon
+yarn add ts-node-dev -D
+
+-> Flags para adicionar no ts-node-dex:
+--respawn 
+--transpile-only
+--ignore-watch node_modules
