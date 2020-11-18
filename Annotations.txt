@@ -31,3 +31,27 @@ Mudar o target para ES2017
 -> Instalar o módulo tsconfig-paths como dependência de desenvolvimento para evitar
 o erro "Cannot find module '@controllers/UsersController'"
 yarn add tsconfig-paths -D
+
+====================== ESlint
+-> instalar o ESlint como uma dependencia de desenvolvimento
+yarn add eslint -D
+
+-> Executar o comando de configuração do ESlint:
+yarn eslint --init
+Selecionar a 3º opção (To check syntax, find problems, and enforce code style)
+Selecionar a 1º opção (Javascript modules (import/export))
+Selecionar a 1º opção (Use a popular style guilde)
+
+======================== JEST
+-> instalar o módulo:
+yarn add jest -D
+
+-> Configurações: 
+yarn jest --init
+
+-> Adicionar o módulo para que o jest entendda TS:
+yarn add ts-jest -D
+
+-> Importar dentro de jest.config:
+import { compilerOptions } from "./tsconfig.json";
+import { pathsToModuleNameMapper } from "ts-jest";
